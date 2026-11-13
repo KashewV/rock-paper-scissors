@@ -23,9 +23,9 @@ def determine_outcome(u, c):
 
         },
         'paper': {
-            'rock': COMPUTER_WINS_MESSAGE, # Intentional Mistake
+            'rock': USER_WINS_MESSAGE, 
             'paper': TIE_GAME_MESSAGE,
-            'scissors': USER_WINS_MESSAGE # Intentional Mistake
+            'scissors': COMPUTER_WINS_MESSAGE 
         },
         'scissors': {
             'rock': COMPUTER_WINS_MESSAGE,
