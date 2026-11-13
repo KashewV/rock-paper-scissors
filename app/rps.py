@@ -1,4 +1,4 @@
-import random
+from random import choice
 
 
 VALID_OPTIONS = ["rock", "paper", "scissors"]
@@ -7,29 +7,9 @@ USER_WINS_MESSAGE = "USER WINS"
 COMPUTER_WINS_MESSAGE = "COMPUTER WINS"
 TIE_GAME_MESSAGE = "TIE GAME"
 
-# ASK USER FOR AN INPUT (R/P/S)
 
-user_choice = input("Please choose one of 'rock', 'paper', or 'scissors': ")
-print("USER:", user_choice)
-
-# VALIDATIONS
-
-if user_choice not in VALID_OPTIONS:
-    print("OOPS INVALID INPUT, PLEASE TRY AGAIN")
-    # exit()
-    quit()
-
-# GENERATE RANDOM COMPUTER CHOICE
-
-computer_choice = random.choice(VALID_OPTIONS)
-print("COMP:", computer_choice)
-
-# DETERMINE THE WINNER
-
-# quick alias to facilitate some copy and pasting
-# we will soon move this into a function anyway
-u = user_choice
-c = computer_choice
+def generate_computer_choice():
+    return choice(VALID_OPTIONS)
 
 
 def determine_outcome(u, c):
@@ -54,6 +34,18 @@ def determine_outcome(u, c):
     elif u == "scissors" and c == "scissors":
         return TIE_GAME_MESSAGE
 
-print(determine_outcome(u, c))
+if __name__ == "__main__":
+
+    u = input("Please choose one of 'rock', 'paper', or 'scissors': ").lower()
+    print("USER Choice:", u)
+    if u not in VALID_OPTIONS:
+        print("OOPS INVALID INPUT, PLEASE TRY AGAIN")
+        exit()
+
+    c = generate_computer_choice()
+    print("COMPUTER Choice:", c)
+
+
+    print(determine_outcome(u, c))
 
 
