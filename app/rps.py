@@ -9,11 +9,33 @@ TIE_GAME_MESSAGE = "TIE GAME"
 
 
 def generate_computer_choice():
+    """
+    Generates a random choice for the computer.
+
+    Returns:
+        str: A random choice from the VALID_OPTIONS list.
+
+    """
     return choice(VALID_OPTIONS)
 
 
 def determine_outcome(u, c):
-# Using a dictionary 
+    """
+    Determines the outcome of a Rock-Paper-Scissors game.
+
+    Args:
+        u (str): The user's choice.
+        c (str): The computer's choice.
+
+    Returns:
+        str: The result of the game.
+
+    Examples:
+        determine_outcome(u="rock", c="scissors")
+        'USER WINS'
+        determine_outcome(u="paper", c="scissors")
+        'COMPUTER WINS'
+    """ 
     winners ={
         'rock': {
             'rock': TIE_GAME_MESSAGE,
