@@ -3,6 +3,10 @@ import random
 
 VALID_OPTIONS = ["rock", "paper", "scissors"]
 
+USER_WINS_MESSAGE = "USER WINS"
+COMPUTER_WINS_MESSAGE = "COMPUTER WINS"
+TIE_GAME_MESSAGE = "TIE GAME"
+
 # ASK USER FOR AN INPUT (R/P/S)
 
 user_choice = input("Please choose one of 'rock', 'paper', or 'scissors': ")
@@ -28,21 +32,21 @@ u = user_choice
 c = computer_choice
 
 if u == "rock" and c == "rock":
-    print("TIE GAME")
+    print(TIE_GAME_MESSAGE)
 elif u == "rock" and c == "paper":
-    print("COMPUTER WINS")
+    print(COMPUTER_WINS_MESSAGE)
 elif u == "rock" and c == "scissors":
-    print("USER WINS")
+    print(USER_WINS_MESSAGE)
 elif u == "paper" and c == "rock":
-    print("COMPUTER WINS") # OOPS
+    print(COMPUTER_WINS_MESSAGE) # OOPS
 elif u == "paper" and c == "paper":
-    print("TIE GAME")
+    print(TIE_GAME_MESSAGE)
 elif u == "paper" and c == "scissors":
-    print("USER WINS") # OOPS
+    print(USER_WINS_MESSAGE) # OOPS
 elif u == "scissors" and c == "rock":
-    print("COMPUTER WINS")
+    print(COMPUTER_WINS_MESSAGE)
 elif u == "scissors" and c == "paper":
-    print("USER WINS")
+    print(USER_WINS_MESSAGE)
 elif u == "scissors" and c == "scissors":
-    print("TIE GAME")
+    print(TIE_GAME_MESSAGE)
     
