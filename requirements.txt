@@ -1,1 +1,8 @@
+# stocks:
+pandas
+python-dotenv
+plotly
+
+
+# testing:
 pytest
