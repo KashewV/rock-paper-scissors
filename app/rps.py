@@ -13,26 +13,27 @@ def generate_computer_choice():
 
 
 def determine_outcome(u, c):
-    if u == "rock" and c == "rock":
-        return TIE_GAME_MESSAGE
-    elif u == "rock" and c == "paper":
-        return COMPUTER_WINS_MESSAGE
-    elif u == "rock" and c == "scissors":
-        return USER_WINS_MESSAGE
+# Using a dictionary 
+    winners ={
+        'rock': {
+            'rock': TIE_GAME_MESSAGE,
+            'paper': COMPUTER_WINS_MESSAGE,
+            'scissors': USER_WINS_MESSAGE
 
-    elif u == "paper" and c == "rock":
-        return COMPUTER_WINS_MESSAGE  # OOPS
-    elif u == "paper" and c == "paper":
-        return TIE_GAME_MESSAGE
-    elif u == "paper" and c == "scissors":
-        return USER_WINS_MESSAGE  # OOPS
 
-    elif u == "scissors" and c == "rock":
-        return COMPUTER_WINS_MESSAGE
-    elif u == "scissors" and c == "paper":
-        return USER_WINS_MESSAGE
-    elif u == "scissors" and c == "scissors":
-        return TIE_GAME_MESSAGE
+        },
+        'paper': {
+            'rock': COMPUTER_WINS_MESSAGE, # Intentional Mistake
+            'paper': TIE_GAME_MESSAGE,
+            'scissors': USER_WINS_MESSAGE # Intentional Mistake
+        },
+        'scissors': {
+            'rock': COMPUTER_WINS_MESSAGE,
+            'paper': USER_WINS_MESSAGE,
+            'scissors': TIE_GAME_MESSAGE
+        }
+    }
+    return winners[u][c]
 
 if __name__ == "__main__":
 
