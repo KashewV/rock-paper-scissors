@@ -31,22 +31,29 @@ print("COMP:", computer_choice)
 u = user_choice
 c = computer_choice
 
-if u == "rock" and c == "rock":
-    print(TIE_GAME_MESSAGE)
-elif u == "rock" and c == "paper":
-    print(COMPUTER_WINS_MESSAGE)
-elif u == "rock" and c == "scissors":
-    print(USER_WINS_MESSAGE)
-elif u == "paper" and c == "rock":
-    print(COMPUTER_WINS_MESSAGE) # OOPS
-elif u == "paper" and c == "paper":
-    print(TIE_GAME_MESSAGE)
-elif u == "paper" and c == "scissors":
-    print(USER_WINS_MESSAGE) # OOPS
-elif u == "scissors" and c == "rock":
-    print(COMPUTER_WINS_MESSAGE)
-elif u == "scissors" and c == "paper":
-    print(USER_WINS_MESSAGE)
-elif u == "scissors" and c == "scissors":
-    print(TIE_GAME_MESSAGE)
-    
+
+def determine_outcome(u, c):
+    if u == "rock" and c == "rock":
+        return TIE_GAME_MESSAGE
+    elif u == "rock" and c == "paper":
+        return COMPUTER_WINS_MESSAGE
+    elif u == "rock" and c == "scissors":
+        return USER_WINS_MESSAGE
+
+    elif u == "paper" and c == "rock":
+        return COMPUTER_WINS_MESSAGE  # OOPS
+    elif u == "paper" and c == "paper":
+        return TIE_GAME_MESSAGE
+    elif u == "paper" and c == "scissors":
+        return USER_WINS_MESSAGE  # OOPS
+
+    elif u == "scissors" and c == "rock":
+        return COMPUTER_WINS_MESSAGE
+    elif u == "scissors" and c == "paper":
+        return USER_WINS_MESSAGE
+    elif u == "scissors" and c == "scissors":
+        return TIE_GAME_MESSAGE
+
+print(determine_outcome(u, c))
+
+
