@@ -1,0 +1,18 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "stocks_form" %}
+
+{% block content %}
+
+    <h1>Stocks Dashboard</h1>
+
+    <p>Enter a stock ticker symbol to see its recent prices.</p>
+
+    <form action="/stocks/dashboard" method="POST">
+        <label for="symbol" class="form-label">Stock Symbol:</label>
+        <input type="text" name="symbol" id="symbol" class="form-control"
+               placeholder="NVDA" value="NVDA" required style="max-width: 300px;">
+        <br>
+        <button type="submit" class="btn btn-success">Get Data</button>
+    </form>
+
+{% endblock %}
