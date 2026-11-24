@@ -3,6 +3,7 @@ A Python app with a Rock, Paper, Scissors game and a stocks dashboard, available
 
 ![CI](https://github.com/Kashewv/rock-paper-scissors/actions/workflows/python-app.yml/badge.svg)
 
+**Live APP:** https://kash-rps-stocks.onrender.com/ 
 
 ## Project Structure
 
