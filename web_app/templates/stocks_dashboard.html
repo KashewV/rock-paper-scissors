@@ -45,7 +45,7 @@
     <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <script type="text/javascript">
         var symbol = "{{ symbol }}";
-        var stockData = {{ data | tojson }};
+        var stockData = JSON.parse('{{ data | tojson }}');
 
         var dates = stockData.map(row => row["timestamp"]);
         var prices = stockData.map(row => row["adjusted_close"]);
