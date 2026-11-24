@@ -1,0 +1,14 @@
+{% extends "bootstrap_layout.html" %}
+{% set active_page = "rps_form" %}
+
+{% block content %}
+
+    <h1>Game Results</h1>
+
+    <p><b>You chose:</b> {{ user_choice.upper() }}</p>
+    <p><b>Computer chose:</b> {{ computer_choice.upper() }}</p>
+    <p><b>Outcome:</b> {{ outcome }}</p>
+
+    <a href="/rps/form" class="btn btn-secondary">Play Again</a>
+
+{% endblock %}
